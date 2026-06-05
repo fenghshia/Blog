@@ -1,3 +1,50 @@
-/*
-    You can add your own custom styles here.
-*/
+body {
+    background-image: url('/background/anime.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 确保背景粒子画布显示在图片之上，而正文内容位于粒子之上 */
+#tsparticles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.article-list article {
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.15);
+}
+
+.site-meta, #main-menu {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.article-page {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.right-sidebar .widget {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.right-sidebar input {
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.15);
+}
+
+.right-sidebar .widget-archive--list {
+    background: rgba(255,255,255,0.15);
+
+}

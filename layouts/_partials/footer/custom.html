@@ -1,0 +1,46 @@
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+
+<div id="tsparticles"></div>
+
+<script>
+    console.log("custom.html loaded");
+    document.addEventListener("DOMContentLoaded", async () => {
+
+        await tsParticles.load({
+            id: "tsparticles",
+            options: {
+                fullScreen: {
+                    enable: true,
+                    zIndex: -1
+                },
+
+                particles: {
+                    number: {
+                        value: 80
+                    },
+
+                    color: {
+                        value: "#ffffff"
+                    },
+
+                    opacity: {
+                        value: 0.4
+                    },
+
+                    size: {
+                        value: {
+                            min: 1,
+                            max: 3
+                        }
+                    },
+
+                    move: {
+                        enable: true,
+                        speed: 1
+                    }
+                }
+            }
+        });
+
+    });
+</script>
