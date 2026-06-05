@@ -19,7 +19,7 @@ SortBy              = "default"
 
 [sidebar]
     emoji    = "🌸"
-    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    subtitle = "露露的铲屎官."
     avatar   = "img/avatar.jpg"
 
 [article]
@@ -51,7 +51,16 @@ SortBy              = "default"
 ## Comments
 [comments]
     enabled  = true
-    provider = "disqus"
+    provider = "giscus"
 
-    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
-    # Copy the configurations you need from there and paste it here.
+[comments.giscus]
+repo = "fenghshia/Blog"
+repoID = "R_kgDOSx5BZg"
+category = "Blog Comments"
+categoryID = "DIC_kwDOSx5BZs4C-kdk"
+mapping = "pathname"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "top"
+lang = "zh-CN"
+theme = "transparent_dark"
