@@ -1,46 +1,64 @@
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-
-<div id="tsparticles"></div>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<div id="tsparticles"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none;"></div>
+<script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
 
 <script>
-    console.log("custom.html loaded");
-    document.addEventListener("DOMContentLoaded", async () => {
-
-        await tsParticles.load({
-            id: "tsparticles",
-            options: {
-                fullScreen: {
-                    enable: true,
-                    zIndex: -1
+    L2Dwidget.init({
+        model: {
+            jsonPath:
+                "https://cdn.jsdelivr.net/gh/evrstr/live2d-widget-models/live2d_evrstr/katou/model.json"
+        },
+        display: {
+            position: "right",
+            width: 180,
+            height: 360,
+            hOffset: 20,
+            vOffset: 0
+        },
+        mobile: {
+            show: true,
+            scale: 0.5
+        },
+        react: {
+            opacityDefault: 0.8,
+            opacityOnHover: 1
+        }
+    });
+    const observer = new MutationObserver(() => {
+        const widget = document.getElementById('live2d-widget');
+        if (widget && widget.parentElement !== document.documentElement) {
+            document.documentElement.appendChild(widget);
+        }
+    });
+    observer.observe(document, { childList: true, subtree: true });
+    document.addEventListener("DOMContentLoaded", function () {
+        tsParticles.load("tsparticles", {
+            fullScreen: {
+                enable: true,
+                zIndex: 0
+            },
+            background: {
+                color: "transparent"
+            },
+            particles: {
+                number: {
+                    value: 120
                 },
-
-                particles: {
-                    number: {
-                        value: 80
-                    },
-
-                    color: {
-                        value: "#ffffff"
-                    },
-
-                    opacity: {
-                        value: 0.4
-                    },
-
-                    size: {
-                        value: {
-                            min: 1,
-                            max: 3
-                        }
-                    },
-
-                    move: {
-                        enable: true,
-                        speed: 1
-                    }
+                color: {
+                    value: "#ffffff"
+                },
+                opacity: {
+                    value: 0.4
+                },
+                size: {
+                    value: { min: 1, max: 3 }
+                },
+                move: {
+                    enable: true,
+                    speed: 1
                 }
             }
         });
-
     });
 </script>
