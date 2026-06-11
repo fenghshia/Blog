@@ -1,0 +1,1 @@
+hugo new content/post/jp50-remember/index.md
