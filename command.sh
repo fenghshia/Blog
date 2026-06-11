@@ -1,1 +1,1 @@
-hugo new content/post/jp50-remember/index.md
+hugo new content/post/jplong/index.md
