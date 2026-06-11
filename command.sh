@@ -1,1 +1,1 @@
-hugo new content/post/jpも/index.md
+hugo new content/post/test-interview/index.md
