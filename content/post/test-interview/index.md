@@ -83,4 +83,6 @@ build:
 
 4. 简写方式::
 
+5. DNS的记录类型为AAAA
+
 ## Jenkins
